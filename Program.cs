@@ -1,7 +1,7 @@
 using System;
-using Queen.Models;
+using Queen_Attack.Models;
 
-public class Queen
+public class Program
 {
   public static void Main()
   {
@@ -12,14 +12,14 @@ public class Queen
 
     Console.WriteLine("Where is the queen? (x,y)");
     string[] queenCoordArray = Console.ReadLine().Split(',');
-    queenX = queenCoordArray[0];
-    queenY = queenCoordArray[1];
+    queenX = int.Parse(queenCoordArray[0]);
+    queenY = int.Parse(queenCoordArray[1]);
     Queen queen = new Queen(queenX, queenY);
 
     Console.WriteLine("Where is the target? (x,y)");
     string[] targetCoordArray = Console.ReadLine().Split(',');
-    targetX = targetCoordArray[0];
-    targetY = targetCoordArray[1];
+    targetX = int.Parse(targetCoordArray[0]);
+    targetY = int.Parse(targetCoordArray[1]);
 
     if (queen.CanAttack(targetX, targetY))
     {

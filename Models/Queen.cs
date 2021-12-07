@@ -1,18 +1,18 @@
 using System;
 
-namespace Queen.Models
+namespace Queen_Attack.Models
 {
   public class Queen
   {
     private int _x;
     private int _y;
-    public void Queen(int x, int y)
+    public Queen(int x, int y)
     {
       _x = x;
       _y = y;
     }
 
-    public static bool CanAttack(int targetX, int targetY)
+    public bool CanAttack(int targetX, int targetY)
     {
       if (_x == targetX || _y == targetY)
       {
